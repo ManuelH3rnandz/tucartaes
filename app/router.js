@@ -7,6 +7,10 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('instructions', { path: '/' });
+  this.route('memorization');
+  this.route('play');
+  this.route('card', { path: '/play/:play_id' });
 });
 
 export default Router;

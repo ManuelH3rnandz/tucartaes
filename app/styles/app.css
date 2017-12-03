@@ -1,0 +1,35 @@
+body{
+  background: rgba(9, 88, 7, 1);
+}
+
+.bg-instructions{
+  background: rgba(0, 255, 0, 1);
+  border-radius: 25px;
+}
+
+.all-screen{
+  height: 100vh;
+}
+
+.img-cards{
+  width: 60%;
+}
+
+.img-card{
+  width: 95%;
+}
+
+.img-group{
+  width: 65%;
+
+}
+/*rewriting bootstraps class*/
+.col{
+  padding-left: 0px;
+}
+
+.row:hover{
+  border-radius: 25px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .3);
+}

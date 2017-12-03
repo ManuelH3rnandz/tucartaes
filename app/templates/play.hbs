@@ -1,0 +1,17 @@
+<div class="container-fluid all-screen d-flex flex-column justify-content-around align-items-center pb-3 pr-5">
+  <h1 class="text-light">Choose a Group</h1>
+
+  {{#each groups as |group|}}
+  <div class="row align-items-center p-3" {{action "rounds" group model on="click"}} >
+    <div class="col">
+      <img src="/images/group{{group.id}}.svg" class="img-fluid img-group" alt="GROUP">
+    </div>
+    {{#each group.cards as |card|}}
+    <div class="col">
+      <img src="/images/{{card}}.svg" class="img-fluid img-card" alt="CARTA">
+    </div>
+    {{/each}}
+  </div>
+{{/each}}
+
+</div>
