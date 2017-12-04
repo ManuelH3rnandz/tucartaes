@@ -1,11 +1,22 @@
 <div class="container all-screen d-flex flex-column justify-content-around align-items-center">
 
-  <h1 class="text-light">Your Card Iss</h1>
+  <h1 class="text-light text-architects">Your Card Is</h1>
 
-  <img src="/images/{{model}}.svg" class="img-fluid img-cards" alt="CARTA">
+  
+
+  <div class="contenedor_carta">
+      <div  class="cara1"> 
+        <img src="/images/carta_atras.svg" class="img-fluid img-your-card" alt="CARTA_REVERSO"> 
+      </div> 
+
+      <div id="carta" class="cara2"> 
+        <img src="/images/{{model}}.svg" class="img-fluid img-your-card" alt="CARTA">
+      </div>   
+      
+  </div>
 
   {{#link-to "instructions"}}
-    <button class="btn btn-danger">AGAIN</button>
+    <button class="btn btn-danger text-neutra">AGAIN</button>
   {{/link-to}}
 
 </div>

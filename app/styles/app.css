@@ -1,9 +1,35 @@
+html{
+  font-size: 15px;
+}
+
+@font-face {
+  font-family: 'NeutraTextBook';
+  src:  url("/fonts/neutratextbook/NeutraText-Book.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ArchitectsDaughter';
+  src:  url("/fonts/Architects_Daughter/ArchitectsDaughter.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text-neutra{
+  font-family: 'NeutraTextBook';
+}
+
+.text-architects{
+  font-family: 'Architects';
+}
+
 body{
-  background: rgba(9, 88, 7, 1);
+  background: rgba(0, 135, 25, 1)
 }
 
 .bg-instructions{
-  background: rgba(0, 255, 0, 1);
+  background: rgba(9, 88, 7, .5);
   border-radius: 25px;
 }
 
@@ -23,6 +49,71 @@ body{
   width: 65%;
 
 }
+
+.img-your-card{
+  width: 40%;
+}
+/* Efectos */
+
+.contenedor_carta{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    perspective: 800px ;
+}
+
+.cara1 > img , .cara2 > img{
+    width: 100%;
+}
+
+.cara1 , .cara2 {
+    width: 39%;
+    height: 100%;
+    position: absolute;
+}
+
+.cara1{
+    animation: carta1 4s forwards;
+    transition: all 2s;
+    transform: rotateY(-90deg);
+}
+
+.cara2{
+    animation: carta2 4s 4s forwards;
+    transition: all 2s;
+    visibility: hidden;
+    transform: rotateY(0deg);
+}
+
+@keyframes carta1 {
+  0%{ 
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+
+  100%{
+    z-index: -2;
+    transform: rotateY(-90deg);
+    visibility: hidden;
+  }
+}
+
+@keyframes carta2 {
+  0%{ 
+    visibility: visible;
+    transform: rotateY(90deg);
+  }
+
+  100%{
+    visibility: visible;
+    ransform: rotateY(0deg);
+  }
+}
+
+
+
 /*rewriting bootstraps class*/
 .col{
   padding-left: 0px;
@@ -32,4 +123,23 @@ body{
   border-radius: 25px;
   overflow: hidden;
   background: rgba(255, 255, 255, .3);
+}
+
+.btn-danger{
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.btn-group > .btn{
+  font-size: 1.4rem;
+}
+
+@media ( max-width: 768px ) {
+  .btn-danger{
+    font-size: 1rem;
+  }
+
+  .btn-group > .btn{
+    font-size: .95rem;
+  }
 }
